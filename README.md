@@ -10,9 +10,10 @@ The app takes in the user info, and guides them in supporting Net Neutrality, by
 **Steps to Install and Running**
 
  1. Get your MongoDB Connection URL from your app hosting, or from **MongoLab**, or install MongoDB and run it locally, and paste it in the **database.js** folder in /**config**
- 2. `npm install`
- 3. `node server.js` (`nodemon` is a better choice)
- 4.  visit localhost:3000 (default) for the app.
+ 2. `git clone`
+ 3. `npm install`
+ 4. `node server.js` (`nodemon` is a better choice)
+ 5.  visit localhost:3000 (default) for the app.
 
 Made with LOVE for FOSSASIA.
 
