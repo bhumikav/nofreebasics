@@ -1,0 +1,187 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Say No to Free Basics</title>
+    <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./semantic/semantic.min.js"></script>
+</head>
+    <body>
+        <div class='wrapper'>
+            <!-- Main Navigation Bar -->
+            <div class='nav-menu dash-main'>
+                <div class='main-logo'>
+                    <a href='/'><img src='main-logo.png'></a>
+                </div>
+                <ul>
+                <!-- List the Menu Items -->
+                    <li><a href='http://blog.savetheinternet.in/the-basics-of-net-neutrality/'>About Net Neutrality</a></li>
+                    <li><a href='http://blog.savetheinternet.in/'>Blog</a></li>
+                    <li><a href='http://blog.savetheinternet.in/faq/'>FAQ</a></li>
+                </ul>
+            </div>
+            <!-- Container -->
+            <div class="ui container profile-page">
+                <h2 class="ui header">
+                <div class="content">
+                    Dashboard
+                    <div class="sub header">Manage, View and Support Net Neutrality</div>
+                </div>
+                </h2>
+                <!-- Divider -->
+                <div class="ui divider"></div>
+                <!-- Three Grids for three Panes -->
+                <div class="ui grid">
+                    <!-- User Profile Grid -->
+                    <div class="four wide column">
+                        <div class="ui card">
+                            <div class="image">
+                                <img src="<%= 'http://www.gravatar.com/avatar/'+user.local.profileData.imageURL+'?s=256&d=identicon&r=PG' %>">
+                            </div>
+                            <div class="content">
+                                <a class="header"><%= user.local.profileData.fullname %></a>
+                                <div class="meta">
+                                    <span class="date">Joined in <%= user.local.createdAt.getFullYear() %> </span>
+                                </div>
+                                <div class="description">
+                                    <p><b>ID :</b> <%= user._id %></p>
+                                    <p><b>E-Mail :</b> <%= user.local.email %></p>
+                                </div>
+                            </div>
+                            <a href="/logout" class="ui bottom attached button"><i class='power icon'></i>Logout</a>
+                        </div>
+                    </div>
+                    <!-- Main Activity Pane or Grid -->
+                    <div class='seven wide column'>
+                        <h3 class="ui centered header">
+                        <div class="content">
+                            Save The Internet
+                            <div class="sub header">Ask your MP to take a stand for Net Neutrality</div>
+                        </div>
+                        </h3>
+                        <p><b>TRAI</b> has issued another consultation paper asking yet once again, If we want <b>Net Neutrality</b>. This time, it's about differential pricing - <b>Airtel Zero</b>, <b>Internet.org</b> and <b>Free Basics</b> type services.</p>
+                        <div class="ui message">
+                            <div class="header">
+                                Submissions have Ended
+                            </div>
+                            <p><b>Public submissions to TRAI have now closed on 7th January and the counter-comment round closed on 14th January.</b>
+                            Meanwhile, you can write to your MP requesting them to support Net Neutrality in Parliament.</p>
+                        </div>
+                        <div class='ui form'>
+                        <div class="field">
+                            <label>Send or Edit the Message</label>
+                            <textarea id='email-msg'>       
+To,
+
+Director of TRAI
+
+Respected Sir,
+
+It has been nine months since over 12 lakh Indian Internet users wrote to the TRAI in favour of Net Neutrality. Over 450 Internet Startups wrote to the Prime Minister for his support in ensuring that the telecom industry and Facebook not to gain control over the Internet by controlling what users access. It has also been five months since thousands of Internet users, in response to a Department of Telecom committee report on Net Neutrality, registered on the Prime Minister’s MyGov.in website, asking the government of India to support Net Neutrality.
+
+In spite of such large scale support for Net Neutrality, including that from many of you in Parliament:
+
+* Telecom operators continue to launch services that violate Net Neutrality, by offering free access to services that they prefer or have tie-ups with.
+
+* Facebook continues to offer and aggressively promote its Free Basics (Internet.org) service, which gives a competitive advantage to Facebook and its partners. The Free Basics service will colonise the Indian startup ecosystem by making Facebook a gatekeeper and the kingmaker for any online website or application.
+
+* The Department of Telecom has not published an amended report considering the clear opposition in responses on MyGov.in to all forms of zero rated services. There has been no notice on how and when it will do so and at present there is a level of uncertainty and confusion which is being caused by some stakeholders by rolling out services which violate net neutrality.
+
+At the same time, telecom operators are partnering with Facebook to run Net Neutrality violating services like Internet.org/Free Basics. These services are aggressively expanding without due respect for the sanctity of ongoing regulatory processes. It is relevant to mention that the DOT draft report in Para 12.7 and 12.8 calls for a complete prohibition specifically on Internet.org. Completely ignoring the spirit of these regulatory processes Facebook has been using its large user base on Facebook with automated popups and campaigns to misinform and mislead Indian users into sending responses favouring Internet.org/Free Basics.
+
+The issue of Net Neutrality is an issue of Internet Freedom, and of the independence of Internet access in India from the control of large oligopolies. The Internet as it is accessed today is the fundamental reason for the progress and innovation we have seen online over the past 15 years. Net Neutrality means that a telecom operator or ISP cannot give competitive advantage to their favoured Internet companies, and therefore will provide a fair opportunity for the development of India’s startup ecosystem and innovative solutions to the economic and social needs of our country.
+
+We endorse the idea of providing “all of the Internet, to all of the people, all of the time”, put forth by the World Wide Web foundation and various international organisations, such as Mozilla, which are seeking to further access without compromising net neutrality. It is our belief that the goals of access and net neutrality are incredibly important for India and the TRAI can further them both without coming at the cost of either. Access and net neutrality are too important to be put into a binary exchange.
+
+As a member and a voter in your constituency, I urge you to please raise your voice in support of Net Neutrality in Parliament, and ask the government to take urgent action by:
+
+1. Putting a moratorium on services such as Internet.org/Free Basics until the governments policy is finalised. We believe and agree with the TRAI that it has adequate jurisdiction to ensure net neutrality through tariff regulation measures. These measures must be exercised urgently, in the interim to prevent widespread breaches that are being done in the absence of binding rules.
+
+2. Asking for the TRAI to choose in favour of Net Neutrality and submit its report before the budget session of Parliament in 2016.
+
+3. A commitment by the Department of Telecom to publish a firm timetable with actionable steps for the introduction of a net neutrality law in India. A firm timetable and consultation process will improve predictability and trust in the consultation framework. It is our fear that despite the TRAI acting in our best interests, certain stakeholders may rely on the earlier consultation, or recommendations following the consultation to instill ambiguity and prevent firm and clear regulations.
+
+Thanking you.
+                            </textarea>
+                        </div>
+                        </div>
+                        <a href="mailto:ap@trai.gov.in?subject=Seeking your support for Net Neutrality&amp;body=
+To,
+
+Director of TRAI
+
+Respected Sir,
+
+It has been nine months since over 12 lakh Indian Internet users wrote to the TRAI in favour of Net Neutrality. Over 450 Internet Startups wrote to the Prime Minister for his support in ensuring that the telecom industry and Facebook not to gain control over the Internet by controlling what users access. It has also been five months since thousands of Internet users, in response to a Department of Telecom committee report on Net Neutrality, registered on the Prime Minister’s MyGov.in website, asking the government of India to support Net Neutrality.
+
+In spite of such large scale support for Net Neutrality, including that from many of you in Parliament:
+
+* Telecom operators continue to launch services that violate Net Neutrality, by offering free access to services that they prefer or have tie-ups with.
+
+* Facebook continues to offer and aggressively promote its Free Basics (Internet.org) service, which gives a competitive advantage to Facebook and its partners. The Free Basics service will colonise the Indian startup ecosystem by making Facebook a gatekeeper and the kingmaker for any online website or application.
+
+* The Department of Telecom has not published an amended report considering the clear opposition in responses on MyGov.in to all forms of zero rated services. There has been no notice on how and when it will do so and at present there is a level of uncertainty and confusion which is being caused by some stakeholders by rolling out services which violate net neutrality.
+
+At the same time, telecom operators are partnering with Facebook to run Net Neutrality violating services like Internet.org/Free Basics. These services are aggressively expanding without due respect for the sanctity of ongoing regulatory processes. It is relevant to mention that the DOT draft report in Para 12.7 and 12.8 calls for a complete prohibition specifically on Internet.org. Completely ignoring the spirit of these regulatory processes Facebook has been using its large user base on Facebook with automated popups and campaigns to misinform and mislead Indian users into sending responses favouring Internet.org/Free Basics.
+
+The issue of Net Neutrality is an issue of Internet Freedom, and of the independence of Internet access in India from the control of large oligopolies. The Internet as it is accessed today is the fundamental reason for the progress and innovation we have seen online over the past 15 years. Net Neutrality means that a telecom operator or ISP cannot give competitive advantage to their favoured Internet companies, and therefore will provide a fair opportunity for the development of India’s startup ecosystem and innovative solutions to the economic and social needs of our country.
+
+We endorse the idea of providing “all of the Internet, to all of the people, all of the time”, put forth by the World Wide Web foundation and various international organisations, such as Mozilla, which are seeking to further access without compromising net neutrality. It is our belief that the goals of access and net neutrality are incredibly important for India and the TRAI can further them both without coming at the cost of either. Access and net neutrality are too important to be put into a binary exchange.
+
+As a member and a voter in your constituency, I urge you to please raise your voice in support of Net Neutrality in Parliament, and ask the government to take urgent action by:
+
+1. Putting a moratorium on services such as Internet.org/Free Basics until the governments policy is finalised. We believe and agree with the TRAI that it has adequate jurisdiction to ensure net neutrality through tariff regulation measures. These measures must be exercised urgently, in the interim to prevent widespread breaches that are being done in the absence of binding rules.
+
+2. Asking for the TRAI to choose in favour of Net Neutrality and submit its report before the budget session of Parliament in 2016.
+
+3. A commitment by the Department of Telecom to publish a firm timetable with actionable steps for the introduction of a net neutrality law in India. A firm timetable and consultation process will improve predictability and trust in the consultation framework. It is our fear that despite the TRAI acting in our best interests, certain stakeholders may rely on the earlier consultation, or recommendations following the consultation to instill ambiguity and prevent firm and clear regulations.
+
+Thanking you.
+
+                        " class="ui attached fluid button"><i class='mail icon'></i>Send Mail</a>
+                    </div>
+                    
+                    <!-- User statistics Grid -->
+                    <div class='five wide column'>
+                        <div class="ui card">
+                            <div class="ui statistic">
+                                <br><div class="value"> <% for ( key in users) %> <%= Number(key)+1 %></div><div class="label">Users</div>
+                            </div>
+                            <div class="content">
+                                <table class="ui basic table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Date Joined</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for ( key in users) {%>
+                                        <tr>
+                                            <td><%= users[key].local.profileData.fullname %></td>
+                                            <td><%= users[key].local.createdAt.getDate()+'/'+
+                                                (users[key].local.createdAt.getMonth()+1)+'/'+
+                                            users[key].local.createdAt.getFullYear() %></td>
+                                        </tr>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="extra content">
+                                <div class="ui pagination menu">
+                                    <a class="active item">1</a>
+                                    <a class="item">2</a>
+                                    <a class="item">3</a>
+                                    <div class="disabled item">...</div>
+                                    <a class="item">10</a>
+                                    <a class="item"><span class='icon right'></span>></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

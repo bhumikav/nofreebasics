@@ -1,0 +1,58 @@
+<!-- views/login.ejs -->
+<!doctype html>
+<html class='index'>
+<head>
+    <title>Say No to Free Basics</title>
+    <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./semantic/semantic.min.js"></script>
+</head>
+<body class>
+<div class='nav-menu dash-main'>
+    <div class='main-logo'>
+        <a href='/'><img src='main-logo.png'></a>
+    </div>
+    <ul>
+        <li><a href='http://blog.savetheinternet.in/the-basics-of-net-neutrality/'>About Net Neutrality</a></li>
+        <li><a href='http://blog.savetheinternet.in/'>Blog</a></li>
+        <li><a href='http://blog.savetheinternet.in/faq/'>FAQ</a></li>
+    </ul>
+</div>
+<div class="content-ls">
+<!-- Login Card -->
+<div class="ui centered card">
+    <div class='image'>
+        <img src='login-logo.png'>
+    </div>
+    <!-- show any messages that come back with authentication -->
+    <!-- LOGIN FORM -->
+    <div class='content'>
+    <% if (message.length > 0) { %>
+        <div class="ui error message">
+            <div class='header centere aligned'>Action Forbidden</div>
+                <p><%= message %></p>
+            </div>
+    <% } %>
+    <!-- Form Elements -->
+    <form class='ui form error' action="/login" method="post">
+        <h2 class="ui centered header">
+            <div class="content">Login</div>
+        </h2>
+        <!-- Email -->
+        <div class="field">
+            <input type="email" placeholder='Email' class="form-control" name="email">
+        </div>
+        <!-- Password -->
+        <div class="field">
+            <input type="password" placeholder='Password' class="form-control" name="password">
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="ui fluid submit button">LOGIN</button>
+    </form>
+    <div class="ui horizontal divider">Or</div>
+    <p><center>Need an account? <a href="/signup"><b>SIGN UP</b></a></center></p>
+    <p><center>Or go <a href="/">HOME</a>.</center></p>
+</div>
+</div>
+</body>
+</html>
