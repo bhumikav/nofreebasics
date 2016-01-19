@@ -22,6 +22,7 @@ app.use(morgan('dev')); //log to console
 app.use(cookieParser()); //read cookies
 app.use(bodyParser()); // get info from html forms
 
+//the srever configuration is for blumix app hosting
 app.set('view engine', 'ejs'); // set up ejs (Embeddble JS) for templating
 var port = (process.env.VCAP_APP_PORT || 3000);
 var host = (process.env.VCAP_APP_HOST || 'localhost');
